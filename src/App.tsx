@@ -1,8 +1,15 @@
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './components/Home';
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-center font-title text-6xl font-semibold py-8 text-lime-500">Gampe</h1>
-    </div>
+    <Router>
+      <div className="container min-h-screen px-2 mx-auto">
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
